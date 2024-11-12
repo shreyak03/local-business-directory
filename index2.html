@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Business Directory</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="navbar">
+            <h1>Local Business Directory</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Best Of</a></li>
+                    <li><a href="#">Real Estate</a></li>
+                    <li><a href="#">Restaurants</a></li>
+                    <li><a href="#">Shop+Design</a></li>
+                    <li><a href="#">Culture</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">'Hoods</a></li>
+                    <li><a href="#">Law</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Login Form -->
+    <div class="login-container" id="loginContainer">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <div class="error-message" id="usernameError">Username must contain a letter and a number</div>
+            <input type="password" id="password" placeholder="Password" required>
+            <select id="role" required>
+                <option value="" disabled selected>Select Role</option>
+                <option value="user">User</option>
+                <option value="admin">Administrator</option>
+                <option value="owner">Business Owner</option>
+            </select>
+            <button type="button" onclick="validateForm()">Login</button>
+        </form>
+    </div>
+
+    <!-- Main Page Content (Initially Hidden) -->
+    <main id="homePage" style="display: none;">
+        <!-- Home Button and Search Bar -->
+        <center>
+        <div class="home-toolbar">
+            <button onclick="goToHomePage()">Home</button>
+            <input type="text" id="searchBar" placeholder="Search businesses..." oninput="searchBusinesses()">
+        </div>
+    </center>
+
+        <!-- Business List Section -->
+        <section class="business-list" id="businessList">
+            <div class="business-card">
+                <h2>Cafe La'sCita & Resto</h2>
+                <div class="image-container">
+                    <img src="la cita.jfif" alt="Cafe La'sCita">
+                    <img src="la cita1.jfif" alt="Cafe La'sCita Interior">
+                </div>
+                <p><i class="fas fa-map-marker-alt"></i> Shop No.01, Rk Nagar Road, Kolhapur - 416013</p>
+                <p>Contact: 9172135279</p>
+                <p>Rating: ★★★★☆</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.2929642414447!2d74.23479064023235!3d16.66221692335546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc0ffe51ac0845d%3A0x8201d8a0a4ff7568!2sCafe%20La&#39;Cita%20%26%20Resto!5e0!3m2!1sen!2sin!4v1731400942739!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="business-card">
+                <h2>Jaswant Sweets</h2>
+                <div class="image-container">
+                    <img src="jaswant1.jfif" alt="Jaswant Sweets">
+                    <img src="jaswant4.jpg" alt="Jaswant Sweets Interior">
+                </div>
+                <p><i class="fas fa-map-marker-alt"></i> Ujalaiwadi, Kolhapur</p>
+                <p>Contact: 7947109013</p>
+                <p>Rating: ★★★★★</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3822.238469344382!2d74.26201517590032!3d16.664946023213542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc0ff17f14e91c1%3A0xcd523f4b0eeb3f4b!2sJaswant%20Sweets!5e0!3m2!1sen!2sin!4v1731401062785!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="business-card">
+                <h2>Wellness Forever Pharmacy</h2>
+                <div class="image-container">
+                    <img src="wellness1.jpg" alt="Wellness Forever Pharmacy">
+                    <img src="wellness2.jpg" alt="Wellness Forever Pharmacy Interior">
+                </div>
+                <p><i class="fas fa-map-marker-alt"></i> New Shahupuri, Kolhapur</p>
+                <p>Contact: 0231 266 5187</p>
+                <p>Rating: ★★★☆☆</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30570.79614014945!2d74.2025732743164!3d16.70940350000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc10189c88dad6f%3A0xf80c83c6e2f439c1!2sWellness%20Forever%20Pharmacy%20-%20New%20Shahupuri%2C%20Kolhapur!5e0!3m2!1sen!2sin!4v1731401130474!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="business-card">
+                <h2>Patlacha Wada Restaurant</h2>
+                <div class="image-container">
+                    <img src="patlacha wada1.jpg" alt="Patlacha Wada Restaurant">
+                    <img src="patlacha wada2.jpg" alt="Patlacha Wada Restaurant Interior">
+                </div>
+                <p><i class="fas fa-map-marker-alt"></i> Nagalapark, Kolhapur</p>
+                <p>Contact: 0231 266 8338</p>
+                <p>Rating: ★★★★☆</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.3555342878094!2d74.22729668544868!3d16.709102980924477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1006fa310dc0d%3A0x88c8ce7e1db6c3f0!2sPatlacha%20wada!5e0!3m2!1sen!2sin!4v1731401174656!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="business-card">
+                <h2>Heaven Pizza & Cafe</h2>
+                <div class="image-container">
+                    <img src="heaven1.jpg" alt="Heaven Cafe">
+                    <img src="heaven2.jpg" alt="Heaven Cafe">
+                </div>
+                <p><i class="fas fa-map-marker-alt"></i> Tarabai Park, Kolhapur</p>
+                <p>Contact: 0231 266 8338</p>
+                <p>Rating: ★★★★☆</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15285.413599643614!2d74.2195718671436!3d16.709209587073406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc101d6d5e5b61d%3A0xecab15a51b78a20d!2sHeaven%20Pizza%20%26%20Cafe!5e0!3m2!1sen!2sin!4v1731401408096!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+    <!-- Modal for Business Details -->
+<div id="businessModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <div id="modalImages" class="image-gallery"></div>
+        <h3>Menu</h3>
+        <ul id="menuList"></ul>
+        <p id="modalContact"></p>
+        <p id="modalAddress"></p>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Local Business Directory</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

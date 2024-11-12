@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #4b0082;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Navigation Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.navbar h1 {
+    font-size: 1.5rem;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin: 0 1rem;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Login Container Styling */
+.login-container {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-container input,
+.login-container select,
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.login-container button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    display: none;
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #f0e6f6;
+    color: #bc3058;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Business List Styling */
+.business-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px; /* Space between home button and business cards */
+}
+
+.business-card {
+    background-color: #e6f7ff;
+    border: 1px solid #b3e0ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.business-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.business-card img {
+    width: 48%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+/* Home Button Styling */
+.home-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #4b0082;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.home-button i {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 1.2rem;
+}
+
+.home-button:hover {
+    background-color: #371060;
+}
+
+/* Search Bar Styling */
+.search-bar {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.image-gallery img {
+    max-width: 100%;
+    height: auto;
+    margin: 5px;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+}

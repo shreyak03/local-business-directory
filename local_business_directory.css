@@ -1,0 +1,124 @@
+/* Basic styling for body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+}
+
+/* Header styling */
+header {
+    background-color: #f0e6f6;
+    color: #1ec3ed;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    border-bottom: 4px solid #48aab5;
+}
+
+/* Main section styling */
+main {
+    padding: 20px;
+}
+
+/* Business list styling */
+.business-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px; /* Adjusts spacing between cards */
+}
+
+.business-card {
+    background-color: #e6f7ff;
+    border: 1px solid #b3e0ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adds space between images */
+    margin-bottom: 15px; /* Adds space between images and the rest of the content */
+}
+
+.business-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.business-card img {
+    width: 48%; /* Keeps images responsive */
+    border-radius: 10px; /* Optional rounded corners for the images */
+    margin-bottom: 10px; /* Adds space between images */
+}
+
+/* Footer styling */
+footer {
+    background-color: #f0e6f6;
+    color: #bc3058;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Login container styling */
+.login-container {
+    width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: absolute; /* Positioning adjusted */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the login box */
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-container input,
+.login-container select,
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.login-container button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    display: none;
+}
