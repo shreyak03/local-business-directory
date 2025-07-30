@@ -8,15 +8,11 @@ A responsive frontend web application that allows users to explore and browse lo
 
 🔍 Simple, clean UI with easy navigation
 
-💻 Built using only frontend technologies – no backend required
-
-📱 Responsive design for mobile and desktop screens
-
 
 📁 Project Structure
 
 local-business-directory/
-├── index2.html                # Main HTML file (rename to index.html for GitHub Pages)
+├── index2.html                
 ├── styles.css                 # Stylesheet for the application
 ├── scripts.js                 # JavaScript functionality
 ├── local_business_directory/  # Folder containing code modules or components
