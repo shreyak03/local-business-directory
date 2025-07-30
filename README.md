@@ -1,16 +1,24 @@
-# Local Business Directory (Frontend)
+Local Business Directory (Frontend)
 
-A responsive frontend application to explore and list local businesses.
+A responsive frontend web application that allows users to explore and browse local businesses categorized by type.
 
-## 🔧 Features
-- Search and browse businesses
-- Business categories (Restaurants, Shops, Services, etc.)
-- Clean and responsive UI
-- Built with HTML, CSS, JavaScript (or React, if applicable)
+🌟 Features
 
-## 📁 Folder Structure
-- `index.html` – Main HTML page
-- `assets/` – Images and static resources
-- `components/` – Reusable frontend components
-- `style.css` / `main.js` – Styles and interactions
+📍 View and explore local businesses
+
+🔍 Simple, clean UI with easy navigation
+
+💻 Built using only frontend technologies – no backend required
+
+📱 Responsive design for mobile and desktop screens
+
+
+📁 Project Structure
+
+local-business-directory/
+├── index2.html                # Main HTML file (rename to index.html for GitHub Pages)
+├── styles.css                 # Stylesheet for the application
+├── scripts.js                 # JavaScript functionality
+├── local_business_directory/  # Folder containing code modules or components
+└── README.md                  # Project documentation
 
